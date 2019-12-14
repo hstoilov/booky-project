@@ -13,19 +13,17 @@
 </head>
 
 <main>
-
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">
-                <asset:image src="book.png" style="width:40px; height: 40px;"/>
-            </a>
+            <g:link class="brand-logo" action="index">Booky</g:link>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html"><i class="material-icons left">list</i>Bücherei</a></li>
-                <li><a href="sass.html"><i class="material-icons left">account_circle</i>Profil</a></li>
+                <li>
+                    <g:link action="index"><i class="material-icons left">list</i>Bücherei</g:link>
+                </li>
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="container  center">
         <g:layoutBody/>
     </div>
 
@@ -44,9 +42,7 @@
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Info</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Bücherei</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Profil</a></li>
+                    <li><g:link action="index" class="grey-text text-lighten-3">Bücherei</g:link></li>
                 </ul>
             </div>
         </div>
