@@ -8,7 +8,6 @@
     </title>
     <asset:stylesheet src="materialize.css"/>
     <asset:link rel="icon" href="book.png" type="image/x-ico"/>
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -23,10 +22,9 @@
             </ul>
         </div>
     </nav>
-    <div class="container  center">
+    <div class="container center">
         <g:layoutBody/>
     </div>
-
 <asset:javascript src="application.js"/>
 
 </main>

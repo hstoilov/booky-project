@@ -1,8 +1,6 @@
 package exercise
 
 class BookController {
-
-
     def bookService
 
     def index() {
@@ -19,12 +17,11 @@ class BookController {
 
     def save(Book book) {
         bookService.save(book)
-        redirect action: "index", method: "GET"
+        redirect action:"index", method:"GET"
     }
 
     def delete(Long id) {
         bookService.delete(id)
-        redirect action: "index", method: "GET"
+        redirect action:"index", method:"GET"
     }
-
 }

@@ -20,8 +20,4 @@ class BookService {
     def delete(id){
         Book.get(id).delete()
     }
-
-    def serviceMethod() {
-
-    }
 }

@@ -10,15 +10,13 @@
 <div class="row">
     <h4>Neues Buch erstellen</h4>
 
+    <!-- div kept for an artificial gap -->
     <div class="col s12 m2"></div>
 
     <div class="col s12 m8">
-
         <g:form resource="${this.book}" method="POST">
-
             <div class="card">
                 <div class="card-content">
-
                     <div class="row">
                         <div class="input-field col s12">
                             <div class="input-field col s6">
@@ -31,10 +29,11 @@
                                          label="Autor"/>
                             </div>
                         </div>
-            <div class="input-field col s12">
-                <f:field bean="book" property="isbn" widget-placeholder="978-3-16-148410-0"
-                                                      label="ISBN"/>
-            </div>
+
+                        <div class="input-field col s12">
+                            <f:field bean="book" property="isbn" widget-placeholder="978-3-16-148410-0"
+                                     label="ISBN" pattern="[0-9]{13-17}"/>
+                        </div>
                     </div>
                 </div>
 
@@ -46,12 +45,11 @@
                                         value="Hinzufügen"/>
                     </h5>
                 </div>
-
             </div>
-
         </g:form>
     </div>
 
+    <!-- div kept for an artificial gap -->
     <div class="col s12 m2"></div>
 </div>
 

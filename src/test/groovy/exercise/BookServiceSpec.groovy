@@ -11,19 +11,20 @@ class BookServiceSpec extends Specification implements ServiceUnitTest<BookServi
     def cleanup() {
     }
 
-    void "Test if the index action returns the correct model"() {
-
+    /* To verify if delete() was invoked from BookService
+    and to verify redirection to the index page */
+    void "To test the delete action with instance"() {
         given:
         controller.bookService = Mock(BookService) {
-            list() >> [new Book(title: 'Unterm Rad',author: 'Hermann Hesse')]
+            1 * delete(2)
         }
 
-        when:"The index action is executed"
-        controller.index()
+        when:"Domain instance is passed to delete action"
+        request.contentType = FORM_CONTENT_TYPE
+        request.method = 'DELETE'
+        controller.delete(2)
 
-        then:"The model is correct"
-        model.bookList.size() == 1
-        model.bookList[0].title == 'Unterm Rad'
-        model.bookList[0].author == 'Hermann Hesse'
+        then:"User is redirected to index"
+        response.redirectedUrl == '/book/index'
     }
 }

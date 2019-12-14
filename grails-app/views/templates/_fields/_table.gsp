@@ -1,5 +1,5 @@
 <%@ page import="grails.util.GrailsNameUtils" %>
-<table class="highlight">
+<table class="highlight" id="bookTable">
     <thead>
     <tr>
         <g:each in="${domainProperties}" var="p" status="i">
